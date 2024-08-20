@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Camiseta Deportiva XXX",
+    "description": "Camiseta de manga corta hecha con material transpirable.",
+    "code": "CAMIS03",
+    "price": 5,
+    "stock": 350,
+    "category": "Ropa Deportiva",
+    "thumbnails": [
+      "https://example.com/images/camiseta1.jpg",
+      "https://example.com/images/camiseta2.jpg"
+    ],
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "Botella de Agua Reutilizable",
+    "description": "Botella de agua de acero inoxidable, capacidad de 750 ml.",
+    "code": "BOTELLA01",
+    "price": 19.99,
+    "stock": 200,
+    "category": "Accesorios Deportivos",
+    "thumbnails": [
+      "https://example.com/images/botella1.jpg"
+    ],
+    "status": true
+  }
+]
