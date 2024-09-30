@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import CartManager from '../services/CartManager.js';
+import { io } from '../app.js';
 
 const router = Router();
 const cartManager = new CartManager();
@@ -7,6 +8,7 @@ const cartManager = new CartManager();
 router.post('/', async (req, res) => {
     try {
         const newCart = cartManager.createCart();
+        io.emit('Carrito Creado', newCart);
         res.status(201).json(newCart);
     } catch (error) {
         res.status(500).json({ error: error.message });

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Productos en tiempo real</h1>
+    <form id="addProductForm">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="text" name="description" placeholder="Descripción" required>
+        <input type="number" name="price" placeholder="Precio" required>
+        <input type="number" name="stock" placeholder="Stock" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+    <form id="deleteProductForm">
+        <input type="text" name="name" placeholder="Nombre del producto a eliminar" required>
+        <button type="submit">Eliminar Producto</button>
+    </form>
+    <div id="products">
+        {{#each products}}
+            <div class="product">
+                <h2>Nombre:{{name}}</h2>
+                <p>Descricion: {{description}}</p>
+                <p>Precio: {{price}}</p>
+                <p>Stock: {{stock}}</p>
+            </div>
+        {{/each}}
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js">
+        
+    </script>
+</body>
+</html>
