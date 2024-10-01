@@ -1,0 +1,1 @@
+export const MONGO_URI = 'mongodb+srv://alejandrodanielmaure:w8R7nx9eJQGtdBtx@db-curso-coder.haavi.mongodb.net/?retryWrites=true&w=majority&appName=db-curso-coder'

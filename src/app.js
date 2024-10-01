@@ -5,12 +5,15 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import handlebars from 'express-handlebars';
 import __dirname from './utils.js';
+import { connectDB } from './utils/mongoose.js';
+
+
+
 
 const PORT = 8080;
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,10 +28,7 @@ let products = [];
 
 export { io };
 
-// PRODUCTS ROUTE
 app.use('/api/products', productsRouter);
-
-// CART ROUTE
 app.use('/api/carts', cartsRouter);
 
 // HOME VIEW
